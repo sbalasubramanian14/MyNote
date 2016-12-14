@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="myNote">
+<head>
+	<meta charset="UTF-8">
+	<title>My Note</title>
+	<link rel="stylesheet" href="style.css"/>
+	<script src="angular.js"></script>
+	<script src="app.js" ></script>
+</head>
+<body ng-controller="NotesController">
+<div class="wrapper" ng-init="init()">
+	<nav>
+		<div class="brand-name">My Note App</div>
+	</nav>
+	<aside>
+		<input  type="button" id="new" value="New Note" ng-click="newNote()">
+		<ul class="note-list">
+			<li class="note-list-item"  ng-repeat="note in notes" ><a  href="#" ng-class="current==notes[$index]?'current-note':''" ng-click="showNote(this)" > {{note.title}} </a></li>
+		</ul>
+	</aside>
+	<section >
+		<div class="note-title">
+			<input type="text" ng-disabled="current===undefined" class="title" ng-model="current.title" placeholder="Your title here...">
+		</div>
+		<div class="note-content">
+			<textarea class="content" ng-disabled="current===undefined" ng-model="current.content" placeholder="Make you note here..."></textarea>
+		</div>
+		<div class="btn-bar">
+			<input type="button" ng-disabled="current===undefined" ng-click="resetNote()" value="Reset" id="reset">
+			<input type="button" ng-disabled="current===undefined" ng-click="deleteNote()" value="Delete" style="float:right;">
+		</div>
+	</section>
+</div>
+</body>
+</html>

@@ -1,0 +1,87 @@
+body{
+ margin:auto;
+ padding: 0;
+ width:800px;
+}
+.wrapper{
+	background-color: #f1f1f1;
+	height: 100%;
+}
+nav{
+ margin:0;
+ padding: 0;
+ height:50px;
+ width:100%;
+ background-color: #f1f1f1;
+}
+input[type="button"]{
+    height: 2em;
+}
+
+.brand-name{
+	padding: 15px;
+	font-size:20px;
+}
+aside{
+	margin: 0;
+	padding: 0;
+	background-color: #f1f1f1;
+	display: block;
+	width: 200px;
+	float: left;
+	position: relative;
+	top:0px;
+	left:0;
+	bottom: 0;
+}
+aside input{
+	width: 200px;
+	height: 3em;
+}
+.note-list{
+	list-style-type:none;
+	margin:0;
+	padding: 0;
+	background-color:#b4d1f0;
+}
+.note-list>li{
+		padding: 10px;
+	background-color: #b4d1f0;
+}
+.note-list>li:hover{
+	
+	background-color: #5095dd;
+}
+.note-list>li a{
+	text-decoration: none;
+	color: #333;
+	display: block;
+}
+.current-note{
+	font-weight: bolder;
+}
+section{
+ width:600px;
+ background-color: #f9f9f9;
+ margin-left:200px;
+}
+.note-title{
+	padding: 15px;
+}
+.title{
+ height: 2em;
+ width:100%;
+ padding: 5px;
+}
+.note-content{
+ padding: 20px;
+}
+.content{
+	min-height: 10em;
+	width: 100%
+}
+.btn-bar{
+	display: block;
+	padding: 20px;
+	align-items:  right;
+}
